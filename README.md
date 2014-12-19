@@ -1,17 +1,14 @@
-Minesweeper
-===========
+# Minesweeper
 
-Description
------------
+## Description
 
 It's a minesweeper game, but in real life!
 
-Timeline
---------
+## Timeline
 
 ### During break: write a beta of the game.
 * Store mine locations and player locations
-* Players can see approximately how far away the closest mine is, but the farther that mine is, the more error in the approximation
+* Show players approximately how far away the closest mine is; the farther that mine is, the more error in the approximation
 * Let players "flag" certain coordinates as mined
 * Might tell players whether or not a flag is accurate, but avoid trial and error
 * If all mines have a nearby flag and no flags are far from mines, the players win!
@@ -21,22 +18,27 @@ Timeline
 
 ### After break: peripheries-- user database, about and instruction pages, desktop/mobile interaction, etc
 * A user database is a must!  Players should be able to log in and see games played, pending games, and things of that ilk.
+* The user database could be extended to hold popular maps, common mined regions (Central Park, for example), and sharing stories.
 * About and instruction pages are important too!  Might be one page.
 * Desktop/mobile interaction-- one or several players might be "mission control--" they can see the map that might have been implemented above.  They would give the players their eye-in-the-sky, possibly balancing issues with too much information coming from the map.
+* Versus mode?  Mine sweepers and mine planters
 
-Roles
------
+## Roles
 
-Harrison
---------
+Subject to change
 
-Tina
-----
+### Harrison
 
-Andrew
-------
+Leaderly stuff like reviewing code and writing this README.  It's harder than it sounds.
 
-Usage
------
+### Tina
+
+CSS things
+
+### Andrew
+
+Javascript things
+
+## Usage
 
 Visit the website-- the index page should be the game. (This will change in the future)
