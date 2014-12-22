@@ -23,6 +23,19 @@ It's a minesweeper game, but in real life!
 * Desktop/mobile interaction-- one or several players might be "mission control--" they can see the map that might have been implemented above.  They would give the players their eye-in-the-sky, possibly balancing issues with too much information coming from the map.
 * Versus mode?  Mine sweepers and mine planters
 
+## A Brief Guide to Git
+
+### Before Writing Code (this should be done already, I think)
+1. Fork from the organization's repository into your own user account.
+2. Create a branch.
+3. Edit your branch's files while writing code.
+
+### After Writing Code
+1. Make sure everything works while still in your branch!
+2. If all is good, merge your own branch with your repository's master branch...
+3. Then submit a pull request to pull your repository's master branch into the organization's repository's master branch.
+4. Other people should then pull from the organization's repository's master branch into their own master branches.
+
 ## Roles
 
 ### Harrison
