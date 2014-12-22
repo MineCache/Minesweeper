@@ -25,8 +25,6 @@ It's a minesweeper game, but in real life!
 
 ## Roles
 
-Subject to change
-
 ### Harrison
 
 Leaderly stuff like reviewing code and writing this README.  It's harder than it sounds.
@@ -38,6 +36,10 @@ CSS things
 ### Andrew
 
 Javascript things
+
+---
+
+Subject to change
 
 ## Usage
 
