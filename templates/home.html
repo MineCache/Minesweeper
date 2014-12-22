@@ -3,13 +3,12 @@
 {% block title %} Minesweeper {% endblock %}
 
 {% block header %}
-<h1> Find the mines! </h1>
+<center><h1> Find the mines! </h1></center>
 {% endblock %}
 
 {% block content %}
-<form method = "POST">
-  <button type = "submit" name = "b" value = "about" class = "pure-button">About the game</button>
 <div id = "content">
-  Play solo or with friends!
+  <p>  Play solo or with friends!
+    <a href = "{{url_for('about')}}">About the game</a>
 </div>
 {% endblock %}
