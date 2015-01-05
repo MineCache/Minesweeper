@@ -7,6 +7,7 @@ It's a minesweeper game, but in real life!
 ## Timeline
 
 ### During break: write a beta of the game.
+### LOL NVM
 * Store mine locations and player locations
 * Show players approximately how far away the closest mine is; the farther that mine is, the more error in the approximation
 * Let players "flag" certain coordinates as mined
