@@ -7,8 +7,19 @@
 {% endblock %}
 
 {% block content %}
-<div id = "content">
-  <p>  Play solo or with friends!
-    <a href = "{{url_for('about')}}">About the game</a>
-</div>
+<center>
+  Play solo or with friends!
+</center>
+<br>
+<p><a href = "{{url_for('about')}}">About the game</a>
+  <br>
+  <br>
+  <input type = submit id = "start" value = "Let's start">
+  <input type = submit id = "pause" value = "Pause">
+  <input type = submit id = "resume" value = "Resume">
+  <div id = "game" style = "background-color:black; color: white; margin:75px; padding:300px;">
+    stuff
+  <script src = "../static/test.js">
+  </script>
+  </div>
 {% endblock %}

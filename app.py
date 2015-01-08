@@ -5,8 +5,8 @@ app.secret_key = 'dont_tell'
 
 @app.route("/", methods = ['GET','POST'])
 @app.route("/home", methods = ['GET','POST'])
-def index():
-    #if request.method == 'GET':
+def home():
+    if request.method == 'GET':
         return render_template("home.html")
     #else:
     #    return redirect(url_for('about'))
@@ -18,6 +18,10 @@ def about():
     #else:
     #    return redirect(url_for('home'))
 
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("404.html")
+    
 if __name__ == "__main__":
     app.debug = True
     app.run()
