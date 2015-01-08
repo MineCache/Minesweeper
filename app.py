@@ -8,15 +8,15 @@ app.secret_key = 'dont_tell'
 def home():
     if request.method == 'GET':
         return render_template("home.html")
-    else:
-        return redirect(url_for('about'))
+    #else:
+    #    return redirect(url_for('about'))
 
 @app.route("/about", methods = ['GET','POST'])
 def about():
-    if request.method == 'GET':
+    #if request.method == 'GET':
         return render_template("about.html")
-    else:
-        return redirect(url_for('home'))
+    #else:
+    #    return redirect(url_for('home'))
 
 @app.errorhandler(404)
 def not_found(e):
