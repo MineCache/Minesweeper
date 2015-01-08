@@ -1,15 +1,19 @@
-{% extends "base.html" %}
-
-{% block title %} Minesweeper {% endblock %}
-
-{% block header %}
-<h1> Find the mines! </h1>
-{% endblock %}
-
-{% block content %}
-<form method = "POST">
-  <button type = "submit" name = "b" value = "about" class = "pure-button">About the game</button>
-<div id = "content">
-  Play solo or with friends!
-</div>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+    <p>
+      input coordinates: <input id="in" type="text">
+    </p>
+    <p>
+      <input id="submit" type="submit" value="Submit">
+    </p>
+    <p id="out">
+      You guessed: _ <br>
+      You are incorrect! D:
+    </p>
+    <script src="../static/home.js"> </script>
+  </body>
+</html>
