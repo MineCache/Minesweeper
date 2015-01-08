@@ -15,6 +15,6 @@ document.getElementById("resume").addEventListener('click',resume);
 
 window.addEventListener('mousemove',function(e){
     mouseX = e.pageX;
-    console.log(mouseX);
+    //console.log(mouseX);
     mouseY = e.pageY;
-})
+});
