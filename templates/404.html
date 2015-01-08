@@ -3,9 +3,10 @@
 {% block title %} Whoops {% endblock %}
 
 {% block header %}
-<h2>Looks like this page does not exist...let's go back to the home page</h2>
+<h2><p>Looks like this page does not exist...let's go back to the home page</h2>
 {% endblock %}
 
 {% block content %}
-redirect link here
+<br><br><br>
+<p><a href = "{{url_for('home')}}">Back Home</a>
 {% endblock %}

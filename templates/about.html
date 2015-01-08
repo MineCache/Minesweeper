@@ -3,14 +3,14 @@
 {% block title %} About {% endblock %}
 
 {% block header %}
-<h1> About </h1>
+<center><h1> About </h1></center>
 {% endblock %}
 
 {% block content %}
-<form method = "POST">
-  <button type = "submit" name = "b" value = "home" class = "
-pure-button">About the game</button>
+<p><a href = "{{url_for('home')}}">Back Home</a></p>
+  <br>
+  <br>
 <div id = "content">
-  Play solo or with friends!
+  <p>It's a minesweeper game, but in real life!
 </div>
 {% endblock %}
