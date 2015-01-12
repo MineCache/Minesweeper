@@ -22,7 +22,7 @@ var submitCallback = function()
 	output += "You are incorrect! D:";	
 	out.innerHTML = output;
     }
-
+    found = false;
 
     //output += (guess == correct) ? 
 	//"You are correct! :D" :
