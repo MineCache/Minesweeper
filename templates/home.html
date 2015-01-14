@@ -1,6 +1,20 @@
 {% extends "base.html" %}
 
+{% block style %}
+#game{
+background-color: black;
+color: white;
+margin: 50px;
+padding: 0px;
+height: 100%;
+width: 100%;
+}
+{% endblock %}
+
 {% block title %} Minesweeper {% endblock %}
+{% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{% endblock %}
 
 {% block header %}
 <center><h1> Find the mines! </h1></center>
@@ -17,7 +31,7 @@
   <input type = submit id = "start" value = "Let's start">
   <input type = submit id = "pause" value = "Pause">
   <input type = submit id = "resume" value = "Resume">
-  <div id = "game" style = "background-color:black; color: white; margin:75px; padding:0px; width:1200px; height:600px;">
+  <div id = "game">
     stuff
   <script src = "../static/testing.js">
   </script>
