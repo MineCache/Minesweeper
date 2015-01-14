@@ -24,7 +24,16 @@ def test():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        return "success!"
+        action = request.form["submit"]
+        if action == "Register":
+            username = request.form["r_username"]
+            password = request.form ["r_password"]
+            confirm = request.form ["r_confirm"]
+            return "registering"
+        elif action == "Login":
+            username = request.form["l_username"]
+            password = request.form ["l_password"] 
+            return "loggin in"
     return render_template("login.html")
 
 @app.errorhandler(404)
