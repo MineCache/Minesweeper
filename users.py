@@ -5,7 +5,7 @@ DB_NAME = ".db"
 def init():
     return sqlite3.connect(DB_NAME)
 
-def init(db):
+def create(db):
     db.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY ASC AUTOINCREMENT, username text, password text)")
 
 def addUser(db, username, password):

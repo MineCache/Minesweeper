@@ -21,8 +21,10 @@ def about():
 def test():
     return render_template("test.html")
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
+    if request.method == "POST":
+        return "success!"
     return render_template("login.html")
 
 @app.errorhandler(404)
