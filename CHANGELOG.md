@@ -6,3 +6,6 @@ Fri Jan  9 11:16:30 EST 2015
 Mon Jan 12 11:45:20 EST 2015
 	-tidied up our homepage
 	-made a file that describes our website's approximate structure
+
+Tue Jan 13 11:45:54 EST 2015
+	-began doing some very basic database work
