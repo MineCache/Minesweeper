@@ -10,3 +10,7 @@ Mon Jan 12
 Wednesday Jan 14
 	-gamebox adjusts for window size
 	-started the button stuff in testing.js
+	
+Thursday Jan 15
+	-gamebox background
+	-css font stuff
