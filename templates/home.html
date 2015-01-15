@@ -3,6 +3,7 @@
 {% block style %}
 #game{
 background-color: black;
+background-image: url("http://fc00.deviantart.net/fs6/f/2005/108/7/8/Minesweeper.gif");
 color: white;
 margin: 50px;
 padding: 0px;
@@ -17,11 +18,11 @@ width: 100%;
 {% endblock %}
 
 {% block header %}
-<center><h1> Find the mines! </h1></center>
+<center class = head><h1> Find the mines! </h1></center>
 {% endblock %}
 
 {% block content %}
-<center>
+<center class = ital>
   Play solo or with friends!
 </center>
 <br>
@@ -31,6 +32,7 @@ width: 100%;
   <input type = submit id = "start" value = "Let's start">
   <input type = submit id = "pause" value = "Pause">
   <input type = submit id = "resume" value = "Resume">
+  </p>
   <div id = "game">
     stuff
   <script src = "../static/testing.js">
