@@ -6,3 +6,7 @@ Fri Jan  9 11:16:30 EST 2015
 
 Mon Jan 12
 	-tracking mouse position in the gamebox
+
+Wednesday Jan 14
+	-gamebox adjusts for window size
+	-started the button stuff in testing.js
