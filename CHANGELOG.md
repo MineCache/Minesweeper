@@ -9,3 +9,8 @@ Mon Jan 12 11:45:20 EST 2015
 
 Tue Jan 13 11:45:54 EST 2015
 	-began doing some very basic database work
+
+Wed Jan 14 11:47:19 EST 2015
+	-continuing with database work
+	-the path from webpage to database is well-paved, just have to write
+	 the actual database stuff
