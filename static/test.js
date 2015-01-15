@@ -31,20 +31,26 @@ var submitCallback = function()
 }
 
 var submit = document.getElementById("submit");
-submit.addEventListener("click", submitCallback);
-submit.addEventListener("click", getLocation);
+submit.addEventListener("click", wrapper);
 
+var wrapper= function() {
+    submitCallback();
+    getLocation();
+}
 
 var l = document.getElementById("location");
 
-function getLocation() {
-    if (navigator.geolcation) {
-	navigator.getlocation.getCurrentPosition(function(position) {
-	    l.innerHTML ="Latitude: " + position.coords.latitude+"<br>Longitude: " + position.coords.longitude;
-	})
+var getLocation = function()
+{
+    if (navigator.geolocation) {
+	navigator.getlocation.getCurrentPosition(showCoords);
     }
     else {
 	l.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
 
+var showCoords = function(position)
+{
+    l.innerHTML = "Latitude: " + position.coords.latitude+"<br>Longitude: " + position.coords.longitude;
+}
