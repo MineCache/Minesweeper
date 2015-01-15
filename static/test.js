@@ -30,12 +30,9 @@ var submitCallback = function()
     //out.innerHTML = output;
 }
 
-var submit = document.getElementById("submit");
-submit.addEventListener("click", wrapper);
-
 var wrapper= function() {
-    submitCallback();
-    getLocation();
+    submitCallback;
+    getLocation;
 }
 
 var l = document.getElementById("location");
@@ -43,7 +40,12 @@ var l = document.getElementById("location");
 var getLocation = function()
 {
     if (navigator.geolocation) {
-	navigator.getlocation.getCurrentPosition(showCoords);
+	navigator.getlocation.getCurrentPosition(function(position){
+	    var lat = position.coords.latitude;
+	    var lng = position.coords.longitude;
+	    l.innerHTML = "Latitude: " + lat + "<br>Longitude: " + lng;
+	}
+						);
     }
     else {
 	l.innerHTML = "Geolocation is not supported by this browser.";
@@ -54,3 +56,9 @@ var showCoords = function(position)
 {
     l.innerHTML = "Latitude: " + position.coords.latitude+"<br>Longitude: " + position.coords.longitude;
 }
+
+console.log(navigator.geolocation);
+
+var submit = document.getElementById("submit");
+submit.addEventListener("click", submitCallback);
+submit.addEventListener("click", getLocation);
