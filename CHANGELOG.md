@@ -14,3 +14,6 @@ Wed Jan 14 11:47:19 EST 2015
 	-continuing with database work
 	-the path from webpage to database is well-paved, just have to write
 	 the actual database stuff
+
+Fri Jan 16 11:46:00 EST 2015
+	-Success! database works, basically; will incorporate with other features as they become available or something
