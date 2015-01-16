@@ -37,15 +37,14 @@ var wrapper= function() {
 
 var l = document.getElementById("location");
 
-var getLocation = function()
+function getLocation()
 {
     if (navigator.geolocation) {
 	navigator.getlocation.getCurrentPosition(function(position){
 	    var lat = position.coords.latitude;
 	    var lng = position.coords.longitude;
 	    l.innerHTML = "Latitude: " + lat + "<br>Longitude: " + lng;
-	}
-						);
+	},locationError);
     }
     else {
 	l.innerHTML = "Geolocation is not supported by this browser.";
