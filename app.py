@@ -12,12 +12,13 @@ def home():
     else:
         return redirect(url_for('about'))
 
+
 @app.route("/about", methods = ['GET','POST'])
 def about():
-    if request.method == 'GET':
+    #if request.method == 'GET':
         return render_template("about.html")
-    else:
-        return redirect(url_for('home'))
+    #else:
+    #    return redirect(url_for('home'))
 
 @app.route("/test")
 def test():

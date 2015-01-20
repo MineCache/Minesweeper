@@ -7,6 +7,9 @@ Mon Jan 12 11:45:20 EST 2015
 	-tidied up our homepage
 	-made a file that describes our website's approximate structure
 
+Mon Jan 12
+	-tracking mouse position in the gamebox
+
 Tue Jan 13 11:45:54 EST 2015
 	-began doing some very basic database work
 
@@ -14,6 +17,14 @@ Wed Jan 14 11:47:19 EST 2015
 	-continuing with database work
 	-the path from webpage to database is well-paved, just have to write
 	 the actual database stuff
+
+Wed Jan 14
+	-gamebox adjusts for window size
+	-started the button stuff in testing.js
+
+Thu Jan 15
+	-gamebox background
+	-css font stuff
 
 Fri Jan 16 11:46:00 EST 2015
 	-Success! database works, basically; will incorporate with other features as they become available or something
