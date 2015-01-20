@@ -14,3 +14,6 @@ Wednesday Jan 14
 Thursday Jan 15
 	-gamebox background
 	-css font stuff
+
+Friday Jan 16
+	-trying to set background transparency
