@@ -30,33 +30,23 @@ var submitCallback = function()
     //out.innerHTML = output;
 }
 
-var wrapper= function() {
-    submitCallback;
-    getLocation;
-}
-
 var l = document.getElementById("location");
 
 function getLocation()
 {
     if (navigator.geolocation) {
-	navigator.getlocation.getCurrentPosition(function(position){
+	navigator.geolocation.getCurrentPosition(function(position){
 	    var lat = position.coords.latitude;
 	    var lng = position.coords.longitude;
 	    l.innerHTML = "Latitude: " + lat + "<br>Longitude: " + lng;
-	},locationError);
+	});
     }
     else {
 	l.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
 
-var showCoords = function(position)
-{
-    l.innerHTML = "Latitude: " + position.coords.latitude+"<br>Longitude: " + position.coords.longitude;
-}
-
-console.log(navigator.geolocation);
+//console.log(navigator.geolocation);
 
 var submit = document.getElementById("submit");
 submit.addEventListener("click", submitCallback);
