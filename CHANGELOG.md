@@ -8,3 +8,6 @@ Mon Jan 12 11:44:40 EST 2015
 
 Tue Jan 13 11:46:32 EST 2015
 	- started working with geolocation for coordinates
+	
+Tue Jan 20 11:27:17 EST 2015
+	- geolocation works
