@@ -15,9 +15,12 @@ background-image: url("/static/minesweeperflag.jpg");
 
 {% block content %}
 <p><a href = "{{url_for('home')}}">Back Home</a></p>
-  <br>
-  <br>
 <div id = "content">
-  <p class = text>It's a minesweeper game, but in real life!
+
+  <p>It's a minesweeper game, but in real life!</p>
+  <h3>Instructions</h3>
+  <p>At the home page, click 'Start Playing!' to begin.</p>
+  <p>Once you're at the game screen, enter your guess of the mine's coordinates in the text box.</p>
+  <p>The game will tell you whether or not those coordinates have a mine.</p>
 </div>
 {% endblock %}

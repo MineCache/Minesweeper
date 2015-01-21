@@ -22,7 +22,7 @@ var submitCallback = function()
 	output += "You are incorrect! D:";	
 	out.innerHTML = output;
     }
-
+    found = false;
 
     //output += (guess == correct) ? 
 	//"You are correct! :D" :
@@ -30,5 +30,24 @@ var submitCallback = function()
     //out.innerHTML = output;
 }
 
+var l = document.getElementById("location");
+
+function getLocation()
+{
+    if (navigator.geolocation) {
+	navigator.geolocation.getCurrentPosition(function(position){
+	    var lat = position.coords.latitude;
+	    var lng = position.coords.longitude;
+	    l.innerHTML = "Latitude: " + lat + "<br>Longitude: " + lng;
+	});
+    }
+    else {
+	l.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+//console.log(navigator.geolocation);
+
 var submit = document.getElementById("submit");
 submit.addEventListener("click", submitCallback);
+submit.addEventListener("click", getLocation);
