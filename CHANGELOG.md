@@ -26,6 +26,7 @@ Thu Jan 15
 
 Fri Jan 16 11:46:00 EST 2015
 	-Success! database works, basically; will incorporate with other features as they become available or something
+	-trying to set background transparency
 
 Tue Jan 20 11:27:17 EST 2015
 	- geolocation works

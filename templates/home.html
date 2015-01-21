@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block style %}
+body{
+background-color: white;
+background-image: url("http://1.bp.blogspot.com/_9HSSJQJL-mI/TR0OQvtX2TI/AAAAAAAABXY/-41ivSYbmKk/s400/minesweeper.png");
+}
+
+#game{
+background-color: black;
+background-image: url("http://fc00.deviantart.net/fs6/f/2005/108/7/8/Minesweeper.gif");
+color: white;
+margin: 50px;
+padding: 0px;
+height: 100%;
+width: 100%;
+}
+{% endblock %}
+
+{% block title %} Minesweeper {% endblock %}
+{% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{% endblock %}
+
+{% block header %}
+<center class = head><h1> Find the mines! </h1></center>
+{% endblock %}
+
+{% block content %}
+<center class = ital>
+  Play solo or with friends!
+</center>
+<br>
+<p><a href = "{{url_for('about')}}">About the game</a>
+  <br>
+  <br>
+  <input type = submit id = "start" value = "Let's start">
+  <input type = submit id = "pause" value = "Pause">
+  <input type = submit id = "resume" value = "Resume">
+  </p>
+  <div id = "game">
+  <script src = "../static/testing.js">
+  </script>
+  </div>
+{% endblock %}
