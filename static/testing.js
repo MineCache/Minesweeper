@@ -3,13 +3,11 @@ var gamebox = document.getElementById("game");
 var go = false;
 
 
-document.getElementById("game").style.width = 0.8 * screen.width + "px";
-document.getElementById("game").style.height = 0.7 * screen.height + "px";
-
-
 document.getElementById("game").style.margin = screen.height / 18 + "px";
 document.getElementById("game").style.width = 0.8 * screen.width + "px";
 document.getElementById("game").style.height = 0.7 * screen.height + "px";
+
+
 
 document.getElementById("start").addEventListener('click',start);
 document.getElementById("pause").addEventListener('click',pause);

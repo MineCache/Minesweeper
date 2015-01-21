@@ -18,6 +18,10 @@ def about():
     #else:
     #    return redirect(url_for('home'))
 
+@app.route("/test")
+def test():
+    return render_template("test.html")
+
 @app.errorhandler(404)
 def not_found(e):
     return render_template("404.html")
