@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} Minesweeper {% endblock %}
+
+{% block header %}
+<center><h1> Find the mines! </h1></center>
+{% endblock %}
+
+{% block content %}
+<center>
+  Play solo or with friends!
+</center>
+<p>
+  <input type="submit" id="start" value="Start Playing!">
+  <input type="submit" id="about" value="About">
+  <input type="submit" id="login" value="Login">
+</p>
+<div id="game" style="background-color:black; color: white; margin:75px; padding:300px;">
+  stuff
+  <script src="../static/index.js">
+  </script>
+</div>
+{% endblock %}
