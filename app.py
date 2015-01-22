@@ -5,7 +5,7 @@ import mine_sqlite3
 app = Flask(__name__)
 app.secret_key = 'dont_tell'
 
-@app.route("/", methods = ['GET','POST'])
+#@app.route("/", methods = ['GET','POST'])
 @app.route("/home", methods = ['GET','POST'])
 def home():
     if request.method == 'GET':
@@ -25,6 +25,7 @@ def about():
 def test():
     return render_template("test.html")
 
+@app.route("/", methods = ['GET','POST'])
 @app.route("/login", methods=["GET", "POST"])
 def login():
 
