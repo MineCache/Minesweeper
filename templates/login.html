@@ -9,6 +9,12 @@
 {% block content %}
 <p>lol html</p>
 <form action="" method="POST">
+  {% if user %}
+  logged in as:<br>
+  Username: {{ user[1] }} <br>
+  Password: {{ user[2] }} <br>
+  <input type="submit" name="submit" value="Logout">
+  {% else %}
   <table>
     <tr><th>REGISTER</th><th>LOGIN</th></tr>
     <tr>
@@ -25,4 +31,5 @@
     </tr>
   </table>
 </form>
+{% endif %}
 {% endblock %}
