@@ -1,6 +1,12 @@
 //var correct = 3
 var correct = [3,4,5];
 var found = false;
+var lat,lng;
+var latrange,lngrange;
+var numMines;
+var newLat, newLng;
+var mineLat = [];
+var mineLng = [];
 
 var submitCallback = function()
 {
@@ -36,8 +42,8 @@ function getLocation()
 {
     if (navigator.geolocation) {
 	navigator.geolocation.getCurrentPosition(function(position){
-	    var lat = position.coords.latitude;
-	    var lng = position.coords.longitude;
+	    lat = position.coords.latitude;
+	    lng = position.coords.longitude;
 	    l.innerHTML = "Latitude: " + lat + "<br>Longitude: " + lng;
 	});
     }
@@ -46,7 +52,34 @@ function getLocation()
     }
 }
 
-//console.log(navigator.geolocation);
+function createMine()
+{
+    var equals = true;
+    while (equals) {
+	var templat = Math.floor(Math.random() * latrange);
+	if (templat - lat != 0){
+	    newLat = templat;
+	    equals = false;
+	}
+    }
+    equals = true;
+    while (equals) {
+	var templng = Math.floor(Math.random() * lngrange);
+	if (templng - lng != 0){
+	    newLng = templng;
+	    equals = false;
+	}
+    }
+}
+    
+function mineGenerator()
+{
+    for(var i = 0, i < numMines, i++){
+	createMine();
+	mineLat.push(newLat);
+	mineLng.push(newLng);
+}
+	
 
 var submit = document.getElementById("submit");
 submit.addEventListener("click", submitCallback);
