@@ -6,9 +6,10 @@ app = Flask(__name__)
 app.secret_key = 'dont_tell'
 
 @app.route("/", methods = ['GET','POST'])
+@app.route("/home", methods = ['GET','POST'])
 def home():
     if request.method == 'GET':
-        return render_template("index.html")
+        return render_template("home.html")
     else:
         return redirect(url_for('about'))
 
