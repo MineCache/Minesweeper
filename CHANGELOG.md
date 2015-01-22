@@ -17,3 +17,6 @@ Thursday Jan 15
 
 Friday Jan 16
 	-trying to set background transparency
+
+Wednesday Jan 20
+	- backgrounds done
