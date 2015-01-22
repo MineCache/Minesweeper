@@ -31,5 +31,9 @@ Fri Jan 16 11:46:00 EST 2015
 Tue Jan 20 11:27:17 EST 2015
 	- geolocation works
 
+Wednesday Jan 21
+	- backgrounds done
+
+
 Thu Jan 22 11:42:26 EST 2015
 	- Working on making random mines with latitude and longitude
