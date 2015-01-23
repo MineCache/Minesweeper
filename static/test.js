@@ -8,7 +8,8 @@ var newLat, newLng;
 var mineLat = [];
 var mineLng = [];
 var topright,topleft,botright,botleft;
-
+var dist;
+var least;
 
 var submitCallback = function()
 {
@@ -82,13 +83,30 @@ function mineGenerator()
 	createMine();
 	mineLat.push(newLat);
 	mineLng.push(newLng);
+    }
+}    
+
+function getDistance(myL,myLn,l,ln)
+{
+    dist = Math.sqrt(Math.pow(myL-l,2)+Math.pow(myLn-ln,2));
 }
 
-function getDistance(a,b,)
+function checkClosest()
 {
-    
-	
+    for (var i = 0;i<numMines;i++){
+	getDistance(lat,lng,mineLat[i],mineLng[i]);
+	var d = dist;
+	if (i == 0) {
+	    least = i;
+	}
+	else if (d < getDistance(lat,lng,mineLat[least],mineLng[least])) {
+	    least = i;
+	}
+    }
+}
 
+	    
 var submit = document.getElementById("submit");
 submit.addEventListener("click", submitCallback);
 submit.addEventListener("click", getLocation);
+	    

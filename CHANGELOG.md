@@ -37,3 +37,6 @@ Wednesday Jan 21
 
 Thu Jan 22 11:42:26 EST 2015
 	- Working on making random mines with latitude and longitude
+
+Fri Jan 23 11:45:12 EST 2015
+	- Working on finding closest mines
