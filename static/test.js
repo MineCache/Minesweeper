@@ -7,6 +7,8 @@ var numMines;
 var newLat, newLng;
 var mineLat = [];
 var mineLng = [];
+var topright,topleft,botright,botleft;
+
 
 var submitCallback = function()
 {
@@ -79,6 +81,10 @@ function mineGenerator()
 	mineLat.push(newLat);
 	mineLng.push(newLng);
 }
+
+function getDistance(a,b,)
+{
+    
 	
 
 var submit = document.getElementById("submit");
