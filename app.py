@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, url_for,flash
+from flask import Flask, render_template, redirect, request, url_for,flash, session
 
 import mine_sqlite3
 
@@ -21,17 +21,21 @@ def about():
     #else:
     #    return redirect(url_for('home'))
 
-@app.route("/test")
+@app.route("/test", methods = ['GET', 'POST'])
 def test():
-    return render_template("test.html")
+    if request.method == "POST":
+        request.form["points"]
+        return redirect(url_for("/"))
+    if "user" in session:
+        return render_template("test.html", user=session["user"])
+    else:
+        return render_template("test.html")
 
 @app.route("/", methods = ['GET','POST'])
 @app.route("/login", methods=["GET", "POST"])
 def login():
-
     db = mine_sqlite3.init()
     mine_sqlite3.create(db)
-
     if request.method == "POST":
         action = request.form["submit"]
         if action == "Register":
@@ -45,25 +49,18 @@ def login():
             if not added:
                 db.close()
                 return "you're already a user!"
-            db.close()
-            return ("registered<br>" + 
-                    "Username: " + username + "<br>" +
-                    "Password: " + password + "<br>")
-
         elif action == "Login":
             username = request.form["l_username"]
             password = request.form ["l_password"]
-
-            user = mine_sqlite3.getUser(db, username, password)
-
+            session["user"] = mine_sqlite3.getUser(db, username, password)
+            user = session["user"]
             if user == None:
                 db.close()
                 return "that user is not registered!"
-            else:
-                db.close()
-                return ("logged in (" + str(user) + ")" + "<br>" + 
-                        "Username: " + user[1] + "<br>" +
-                        "Password: " + user[2] + "<br>")
+        elif action == "Logout":
+            session.pop("user")
+    if "user" in session:
+        return render_template("login.html", user=session["user"])
     else:
         return render_template("login.html")
 
