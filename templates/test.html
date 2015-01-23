@@ -4,6 +4,11 @@
     <title>Home</title>
   </head>
   <body>
+    {% if user %}
+    <p>
+      Logged in as: {{ user[1] }}
+    </p>
+    {% endif %}
     <p>
       input coordinates: <input id="in" type="text">
     </p>
@@ -15,6 +20,12 @@
       You are incorrect! D:
     </p>
     <p id= "location">
+    </p>
+    <p>
+      <form action="" method="POST">
+	<input id="points" type="hidden" name="points" value="{{ user[3] }}">
+	<input id="back" type="submit" name="submit" value="Go back">
+      </form>
     </p>
     <script src="../static/test.js"> </script>
   </body>

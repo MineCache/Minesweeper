@@ -21,9 +21,15 @@ def about():
     #else:
     #    return redirect(url_for('home'))
 
-@app.route("/test")
+@app.route("/test", methods = ['GET', 'POST'])
 def test():
-    return render_template("test.html")
+    if request.method == "POST":
+        request.form["points"]
+        return redirect(url_for("/"))
+    if "user" in session:
+        return render_template("test.html", user=session["user"])
+    else:
+        return render_template("test.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():

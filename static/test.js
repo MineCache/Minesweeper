@@ -15,7 +15,9 @@ var submitCallback = function()
 	    output += "You are correct! :D";
 	}
     }
+    var points = document.getElementById("points");
     if (found) {
+	points.setAttribute("data-points", points.getAttribute("data-points") + 1);
 	out.innerHTML = output;
     }
     else {
