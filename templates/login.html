@@ -1,5 +1,28 @@
 {% extends "base.html" %}
 
+{% block style %}
+div{
+background-color: #EDEDED;
+width: 750px;
+padding: 25px;
+border: 10px solid mediumturquoise;
+margin: 25px;
+}
+
+td{
+border-left: 5px solid mediumturquoise;
+border-right: 5px solid mediumturquoise;
+}
+
+td:first-child{
+border-left: none;
+}
+
+td:last-child{
+border-right: none;
+}
+{% endblock %}
+
 {% block title %} Login - Minesweeper {% endblock %}
 
 {% block header %}
@@ -15,21 +38,24 @@
   Password: {{ user[2] }} <br>
   <input type="submit" name="submit" value="Logout">
   {% else %}
-  <table>
-    <tr><th>REGISTER</th><th>LOGIN</th></tr>
-    <tr>
-      <td> <p>Username: <input type="text" name="r_username"></p> </td>
-      <td> <p>Username: <input type="text" name="l_username"></p> </td>
-    </tr><tr>
-      <td> <p>Password: <input type="password" name="r_password"></p> </td>
-      <td> <p>Password: <input type="password" name="l_password"></p> </td>
-    </tr><tr>
-      <td><p>Confirm Password: <input type="password" name="r_confirm"></p></td>
-    </tr><tr>
-      <td> <input type="submit" name="submit" value="Register"> </td>
-      <td> <input type="submit" name="submit" value="Login"> </td>
-    </tr>
-  </table>
+  <div id = "lr">
+    <table>
+      <tr><th>REGISTER</th><th>LOGIN</th></tr>
+      <tr>
+	<td> <p>Username: <input type="text" name="r_username"></p> </td>
+	<td> <p>Username: <input type="text" name="l_username"></p> </td>
+      </tr><tr>
+	<td> <p>Password: <input type="password" name="r_password"></p> </td>
+	<td> <p>Password: <input type="password" name="l_password"></p> </td>
+      </tr><tr>
+	<td><p>Confirm Password: <input type="password" name="r_confirm"></p></td><td></td>
+      </tr><tr>
+	<td> <p><input type="submit" name="submit" value="Register"> </td>
+	<td> <p><input type="submit" name="submit" value="Login"> </td>
+      </tr>
+    </table>
+  </div>
 </form>
+<script src = "../static/testing2.js">
 {% endif %}
 {% endblock %}
