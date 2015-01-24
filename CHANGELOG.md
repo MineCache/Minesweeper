@@ -34,3 +34,5 @@ Tue Jan 20 11:27:17 EST 2015
 Wednesday Jan 21
 	- backgrounds done
 
+Friday Jan 23
+	-started css for login page
