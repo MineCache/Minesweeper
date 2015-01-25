@@ -26,7 +26,6 @@ def test():
             db = mine_sqlite3.init()
             mine_sqlite3.create(db)
             #same number of characters????
-            print "~~~~ *" + session["user"][1] + ": " + request.form["points"] + "* ~~~~"
             mine_sqlite3.incUser(db, session["user"][1], request.form["points"])
             db.commit()
             session["user"] = mine_sqlite3.getUser(db, session["user"][1], session["user"][2]);
