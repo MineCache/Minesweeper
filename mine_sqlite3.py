@@ -22,10 +22,17 @@ def addUser(db, username, password):
 def getUser(db, username, password):
     query = db.execute("SELECT * FROM users WHERE username = ?;", (username,))
     user = query.fetchone()
-    return user
+    if user != None and user[2] == password:
+        return user
+    else:
+        return None
 
 def incUser(db, username, points):
-    db.execute("UPDATE users SET points = ? WHERE username = ?", (username, points));
-    
-def reset():
+    db.execute("UPDATE users SET points = ? WHERE username = ?;", (points, username))
+    print db.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
+
+def reset(db):
     db.execute("DROP TABLE users;")
+
+if __name__ == "__main__":
+    reset(init())

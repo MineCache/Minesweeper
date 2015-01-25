@@ -27,9 +27,10 @@ var submitCallback = function()
 	    output += "You are correct! :D";
 	}
     }
-    var points = document.getElementById("points");
     if (found) {
-	points.setAttribute("value", points.getAttribute("value") + 1);
+	var points = document.getElementById("points");
+	points.setAttribute("value", parseInt(points.getAttribute("value")) + 1);
+	points.setAttribute("size", points.getAttribute("value").toString().length);
     }
     else {
 	output += "You are incorrect! D:";

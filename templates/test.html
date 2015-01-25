@@ -4,28 +4,27 @@
     <title>Minesweeper</title>
   </head>
   <body>
-    {% if user %}
-    <p>
-      Logged in as: {{ user[1] }}
-    </p>
-    {% endif %}
+    <form action="" method="POST">
+      <input type="submit" value="Back">
+      {% if user %}
+      <p>
+	Logged in as: {{ user[1] }}
+      </p><p>
+	Points: <input id="points" type="text" name="points" value="{{ user[3] }}" size="{{ size }}" readonly>
+      </p>
+      {% endif %}
+    </form>
     <p>
       input coordinates: <input id="in" type="text">
     </p>
     <p>
-      <form action="" method="POST">
-	<input id="submit" type="submit" value="Guess">
-	<input id="points" type="hidden" name="points" value="{{ user[3] }}">
+      <input id="submit" type="submit" value="Guess">
     </p>
-    </form>
     <p id="out">
       You guessed: _ <br>
       You are incorrect! D:
     </p>
     <p id="location">
-    </p>
-    <p>
-      <a href="/">Back</a>
     </p>
     <script src="../static/test.js"> </script>
   </body>
