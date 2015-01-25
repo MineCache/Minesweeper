@@ -6,6 +6,7 @@ var submitCallback = function()
 {
     var input = document.getElementById("in");
     var out = document.getElementById("out");
+    var points = document.getElementById("points");
 
     var guess = input.value;
     var output = "You guessed: " + guess + "<br>";
@@ -17,13 +18,12 @@ var submitCallback = function()
     }
     var points = document.getElementById("points");
     if (found) {
-	points.setAttribute("data-points", points.getAttribute("data-points") + 1);
-	out.innerHTML = output;
+	points.setAttribute("value", points.getAttribute("value") + 1);
     }
     else {
-	output += "You are incorrect! D:";	
-	out.innerHTML = output;
+	output += "You are incorrect! D:";
     }
+    out.innerHTML = output;
     found = false;
 
     //output += (guess == correct) ? 
