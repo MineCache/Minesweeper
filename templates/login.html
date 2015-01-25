@@ -44,15 +44,14 @@ border-right: none;
 {% endblock %}
 
 {% block content %}
-<form action="" method="POST">
-  {% if user %}
-  logged in as:<br>
-  Username: {{ user[1] }} <br>
-  Password: {{ user[2] }} <br>
-  <input type="submit" name="submit" value="Logout">
-  {% else %}
-  <center>
-    <div id = "lr" class = log>
+<center>
+  <div id = "lr" class = log>
+    <form action="" method="POST">
+      {% if user %}
+      logged in as: {{ user[1] }} <br>
+      <input type="submit" name="submit" value="Logout">
+      <p>Points: {{ user[3] }}</p>
+      {% else %}
       <table>
 	<tbody>
 	  <tr><th>REGISTER</th><th>LOGIN</th></tr>
@@ -70,13 +69,16 @@ border-right: none;
 	  </tr>
 	</tbody>
       </table>
-    </div>
-  </center>
-</form>
+      {% endif %}
+    </form>
+    <a href="/">Back</a>
+  </div>
+</center>
+
+
 <script>
-document.getElementById("lr").style.width = 0.7 * screen.width + "px";
-document.getElementById("lr").style.margin = screen.height / 25 + "px";
-document.getElementById("bawx").style.margin = screen.height / 16 + "px " + screen.width / 4 + "px " + screen.height / 16 + "px " + screen.width / 4 + "px";
+  document.getElementById("lr").style.width = 0.7 * screen.width + "px";
+  document.getElementById("lr").style.margin = screen.height / 25 + "px";
+  document.getElementById("bawx").style.margin = screen.height / 16 + "px " + screen.width / 4 + "px " + screen.height / 16 + "px " + screen.width / 4 + "px";
 </script>
-{% endif %}
 {% endblock %}
