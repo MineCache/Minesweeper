@@ -7,6 +7,8 @@ var numMines;
 var newLat, newLng;
 var mineLat = [];
 var mineLng = [];
+var flagLat = [];
+var flagLng = [];
 var topright,topleft,botright,botleft;
 var dist;
 var least;
@@ -105,8 +107,24 @@ function checkClosest()
     }
 }
 
+function placeFlag(fLat,fLng)
+{
+    flagLat.push(fLat);
+    flagLng.push(fLng);
+}
+
+function onMine(){
+    if (lat in mineLat && lng in mineLng){
+	for (var i = 0; i < mineLat.length; i++){
+	    if (mineLat[i] == lat && mineLng[i] == lng){
+		return true;
+	    }
+	}
+    }
+    return false;
+}
+
 	    
 var submit = document.getElementById("submit");
 submit.addEventListener("click", submitCallback);
 submit.addEventListener("click", getLocation);
-	    

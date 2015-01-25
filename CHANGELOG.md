@@ -40,3 +40,6 @@ Thu Jan 22 11:42:26 EST 2015
 
 Fri Jan 23 11:45:12 EST 2015
 	- Working on finding closest mines
+
+Sat Jan 24 21:29:38 EST 2015
+	- possible flags and on mine
