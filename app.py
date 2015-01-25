@@ -23,8 +23,13 @@ def about():
 @app.route("/test", methods = ['GET', 'POST'])
 def test():
     if request.method == "POST":
-        request.form["points"]
-        return redirect(url_for("/"))
+        if "user" in session:
+            db = mine_sqlite3.init()
+            mine_sqlite3.create(db)
+            incUser(db, session["user"], request.form["points"])
+            db.commit()
+            db.close()
+        return redirect(url_for("index"))
     if "user" in session:
         return render_template("test.html", user=session["user"])
     else:
