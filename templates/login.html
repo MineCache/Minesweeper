@@ -1,15 +1,27 @@
 {% extends "base.html" %}
 
 {% block style %}
-div{
+body{
+background-color:white;
+background-image: url(/static/minesweeperlogin.png);
+}
+
+div.log{
 background-color: #EDEDED;
 width: 750px;
 padding: 25px;
+border-collapse: collapse;
 border: 10px solid mediumturquoise;
+border-spacing: 100px;
 margin: 25px;
 }
 
+tbody{
+vertical-align: left;
+}
+
 td{
+padding: 30px;
 border-left: 5px solid mediumturquoise;
 border-right: 5px solid mediumturquoise;
 }
@@ -26,11 +38,12 @@ border-right: none;
 {% block title %} Login - Minesweeper {% endblock %}
 
 {% block header %}
-<center><h1> Login </h1></center>
+<div class = transbox id = "bawx">
+  <center><h1> Login </h1></center>
+</div>
 {% endblock %}
 
 {% block content %}
-<p><a href="/">lol html</a></p>
 <form action="" method="POST">
   {% if user %}
   logged in as:<br>
@@ -38,24 +51,32 @@ border-right: none;
   Password: {{ user[2] }} <br>
   <input type="submit" name="submit" value="Logout">
   {% else %}
-  <div id = "lr">
-    <table>
-      <tr><th>REGISTER</th><th>LOGIN</th></tr>
-      <tr>
-	<td> <p>Username: <input type="text" name="r_username"></p> </td>
-	<td> <p>Username: <input type="text" name="l_username"></p> </td>
-      </tr><tr>
-	<td> <p>Password: <input type="password" name="r_password"></p> </td>
-	<td> <p>Password: <input type="password" name="l_password"></p> </td>
-      </tr><tr>
-	<td><p>Confirm Password: <input type="password" name="r_confirm"></p></td><td></td>
-      </tr><tr>
-	<td> <p><input type="submit" name="submit" value="Register"> </td>
-	<td> <p><input type="submit" name="submit" value="Login"> </td>
-      </tr>
-    </table>
-  </div>
+  <center>
+    <div id = "lr" class = log>
+      <table>
+	<tbody>
+	  <tr><th>REGISTER</th><th>LOGIN</th></tr>
+	  <tr>
+	    <td> <p>Username: <input type="text" name="r_username"></p> </td>
+	    <td> <p>Username: <input type="text" name="l_username"></p> </td>
+	  </tr><tr>
+	    <td> <p>Password: <input type="password" name="r_password"></p> </td>
+	    <td> <p>Password: <input type="password" name="l_password"></p> </td>
+	  </tr><tr>
+	    <td><p>Confirm Password: <input type="password" name="r_confirm"></p></td><td></td>
+	  </tr><tr>
+	    <td> <p><input type="submit" name="submit" value="Register"> </td>
+	    <td> <p><input type="submit" name="submit" value="Login"> </td>
+	  </tr>
+	</tbody>
+      </table>
+    </div>
+  </center>
 </form>
-<script src = "../static/testing2.js">
+<script>
+document.getElementById("lr").style.width = 0.7 * screen.width + "px";
+document.getElementById("lr").style.margin = screen.height / 25 + "px";
+document.getElementById("bawx").style.margin = screen.height / 16 + "px " + screen.width / 4 + "px " + screen.height / 16 + "px " + screen.width / 4 + "px";
+</script>
 {% endif %}
 {% endblock %}

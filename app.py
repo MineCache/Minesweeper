@@ -1,11 +1,10 @@
-from flask import Flask, render_template, redirect, request, url_for,flash, session
+from flask import Flask, render_template, redirect, request, url_for, flash, session
 
 import mine_sqlite3
 
 app = Flask(__name__)
 app.secret_key = 'dont_tell'
 
-#@app.route("/", methods = ['GET','POST'])
 @app.route("/home", methods = ['GET','POST'])
 def home():
     if request.method == 'GET':
@@ -16,10 +15,7 @@ def home():
 
 @app.route("/about", methods = ['GET','POST'])
 def about():
-    #if request.method == 'GET':
         return render_template("about.html")
-    #else:
-    #    return redirect(url_for('home'))
 
 @app.route("/test", methods = ['GET', 'POST'])
 def test():
@@ -44,11 +40,13 @@ def login():
             confirm = request.form ["r_confirm"]            
             if password != confirm:
                 db.close()
-                return "passwords don't match! D:"
+                flash("Passwords don't match! D:")
+                return redirect(url_for('login'))
             added = mine_sqlite3.addUser(db, username, password)
             if not added:
                 db.close()
-                return "you're already a user!"
+                flash("You're already a user!")
+                return redirect(url_for('login'))
         elif action == "Login":
             username = request.form["l_username"]
             password = request.form ["l_password"]
@@ -56,7 +54,10 @@ def login():
             user = session["user"]
             if user == None:
                 db.close()
-                return "that user is not registered!"
+                flash("That user is not registered!")
+                return redirect(url_for('login'))
+            else:
+                return render_template("home.html")
         elif action == "Logout":
             session.pop("user")
     if "user" in session:
