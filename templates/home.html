@@ -15,6 +15,7 @@ padding: 0px;
 height: 100%;
 width: 100%;
 }
+
 {% endblock %}
 
 {% block title %} Minesweeper {% endblock %}
@@ -23,6 +24,7 @@ width: 100%;
 {% endblock %}
 
 {% block header %}
+<div class = transbox id = "bawx">
 <center class = head><h1> Find the mines! </h1></center>
 {% endblock %}
 
@@ -31,6 +33,10 @@ width: 100%;
   Play solo or with friends!
 </center>
 <br>
+</div>
+<br>
+<div class = transbox id = "bawx2">
+<div>
 <p><a href = "{{url_for('about')}}">About the game</a>
   <br>
   <br>
@@ -38,6 +44,8 @@ width: 100%;
   <input type = submit id = "pause" value = "Pause">
   <input type = submit id = "resume" value = "Resume">
   </p>
+</div>
+</div>
   <div id = "game">
   <script src = "../static/testing.js">
   </script>

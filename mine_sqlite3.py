@@ -6,7 +6,7 @@ def init():
     return sqlite3.connect(DB_NAME)
 
 def create(db):
-    db.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY ASC AUTOINCREMENT, username text, password text);")
+    db.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY ASC AUTOINCREMENT, username TEXT, password TEXT, points INTEGER);")
     db.commit()
 
 def addUser(db, username, password):
