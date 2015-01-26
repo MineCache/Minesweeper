@@ -17,7 +17,9 @@ width: 100%;
 }
 
 #ms{
-background-color:black;
+visibility: hidden;
+background-color: black;
+color: white;
 }
 
 {% endblock %}
@@ -29,39 +31,37 @@ background-color:black;
 
 {% block header %}
 <div class = transbox id = "bawx">
-<center class = head><h1> Find the mines! </h1></center>
-{% endblock %}
+  <center class = head><h1> Find the mines! </h1></center>
+  {% endblock %}
 
-{% block content %}
-<center class = ital>
-  Play solo or with friends!
-</center>
-<br>
+  {% block content %}
+  <center class = ital>
+    Play solo or with friends!
+  </center>
+  <br>
 </div>
 <br>
 <div class = transbox id = "bawx2">
-<div>
-<p><a href = "{{url_for('about')}}">About the game</a>
-  <br>
-  <br>
-  <form method = "POST">
-    <p><input type="submit" name="submit" id = "start" value="Start Playing!">
-    <input type="submit" name="submit" value="Login">
-  </form>
-  </p>
-</div>
-</div>
-  <div id = "game" name = "newPage">
+  <div>
+    <p><a href = "{{url_for('login')}}">Login</a></p>
+    <p><a href = "{{url_for('about')}}">About the game</a></p>
     <br>
-    <div id = "ms">
-      <p><form onsubmit="return getArenaSize();" name="getCoords">
+    <form>
+      <p><input type="button" onclick = "stayvis()"  id = "start" value="Start Playing!"></p>
+    </form>
+  </div>
+</div>
+<div id = "game" name = "newPage">
+  <br>
+  <div id = "ms">
+    <p><form onsubmit="return getArenaSize();" name="getCoords">
 	Enter the size of your arena and click the button to set it.<br>
 	Longitude length: <input type="text" name="longitude" value=""><br>
 	Latitude length: <input type="text" name="latitude" value=""><br>
 	<input type="submit" value="Submit">
       </form>
-    </div>
-  <script src = "../static/MS.js">
-  </script>
   </div>
+</div>
+<script src = "/static/MS.js?4">
+</script>
 {% endblock %}
