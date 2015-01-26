@@ -16,6 +16,17 @@
       center.ital{
       font-style: oblique;
       }
+      div.transbox{
+      margin: 30px;
+      padding: 10px;
+      background-color: #ffffff;
+      border: 1px solid black;
+      opacity: 0.65;
+      filter alpha(opacity = 65);
+      }
+      div.transbox p{
+      font-weight: bold;
+      }
       {% block style %}
       {% endblock %}
     </style>
@@ -23,6 +34,19 @@
     {% block head %}
     {% endblock %}
   </head>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <ul class=flashes>
+    <div class = transbox>
+    <font color = "red" size = 6>
+      {% for message in messages %}
+      {{ message }}
+      {% endfor %}
+    </font>
+    </div>
+</ul>
+{% endif %}
+{% endwith %}
   <body>
     {% block header %}
     <h1>Page </h1>

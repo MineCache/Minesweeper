@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home</title>
+    <title>Minesweeper</title>
   </head>
   <body>
+    <form action="" method="POST">
+      <input type="submit" value="Back">
+      {% if user %}
+      <p>
+	Logged in as: {{ user[1] }}
+      </p><p>
+	Points: <input id="points" type="text" name="points" value="{{ user[3] }}" size="{{ size }}" readonly>
+      </p>
+      {% endif %}
+    </form>
     <p>
       input coordinates: <input id="in" type="text">
     </p>
     <p>
-      <input id="submit" type="submit" value="Submit">
+      <input id="submit" type="submit" value="Guess">
     </p>
     <p id="out">
       You guessed: _ <br>
       You are incorrect! D:
     </p>
-    <p id= "location">
+    <p id="location">
     </p>
     <script src="../static/test.js"> </script>
   </body>

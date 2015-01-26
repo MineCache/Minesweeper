@@ -34,5 +34,16 @@ Tue Jan 20 11:27:17 EST 2015
 Wednesday Jan 21
 	- backgrounds done
 
-Friday Jan 23
-	-started css for login page
+Thu Jan 22 11:42:26 EST 2015
+	- Working on making random mines with latitude and longitude
+
+Fri Jan 23 11:45:12 EST 2015
+	- Working on finding closest mines
+	- started css for login page
+
+Sat Jan 24 21:29:38 EST 2015
+	- possible flags and on mine
+	- finished login css, added flash and transparent boxes
+
+Sun Jan 25 17:25:27 EST 2015
+	- finished the javascript portion
