@@ -47,3 +47,6 @@ Sat Jan 24 21:29:38 EST 2015
 
 Sun Jan 25 17:25:27 EST 2015
 	- finished the javascript portion
+	- moved stuff into home.html and ms.js
+Mon Jan 26
+	- invis and not invis after clicking start playing
