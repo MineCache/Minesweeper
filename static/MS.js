@@ -10,7 +10,7 @@ var explored;
 var currentPosition = [0,0];
 //ARG I TRIED IDK WHY THE PAGE KEEPS REFRESHING AND THE JS REFRESHES
 //var vis = 'hidden';
-var vis = 'visible';
+//var vis = 'visible';
 
 document.getElementById("bawx").style.margin = screen.height / 16 + "px " + screen.width / 4 + "px " + screen.height / 16 + "px " + screen.width / 4 + "px" ;
 document.getElementById("bawx2").style.margin = screen.height / 16 + "px " + screen.width / 1.75 + "px " + screen.height / 16 + "px " + screen.width / 12 + "px" ;
@@ -19,27 +19,12 @@ document.getElementById("game").style.margin = screen.width / 18 + "px";
 document.getElementById("game").style.width = 0.8 * screen.width + "px";
 document.getElementById("game").style.height = 0.7 * screen.height + "px";
 
-window.addEventListener('mousemove', function(e){
-    if (vis == 'visible'){
-	vis = vis;
-    }
-    document.getElementById("ms").style.visibility = vis;
-    //window.removeEventListener('mousemove', onetime);
-    console.log(vis);
-    //return;
-    //document.getElementById("game").style.background = "black";
-});
-
-document.getElementById("start").addEventListener('click', function(){
-    vis = 'visible';
-    //console.log(vis);
+//I WOULD LIKE TO THANK NSDEL FROM STACKOVERFLOW
+function stayvis(){
+    console.log("doing");
     document.getElementById("ms").style.visibility = 'visible';
-    window.removeEventListener('mousemove');
-    //DOESNT REALLY WORK CUZ PAGE REFRESHES
-    document.getElementById("game").style.background = "black";
-    //return;
+    document.getElementById("game").style.background = 'black';
 }
-);				
 
 function getArenaSize(){
     var form = document.getElementsByName("getCoords")[0];
@@ -69,11 +54,13 @@ function getArenaSize(){
 }
 
 function updatePositions(){
+    stayvis();
     updateLat();
     updateLong();
 }
 
 function updateWrapper(){
+    stayvis()
     setInterval(updatePositions, 1000); 
     iniMap();
 }

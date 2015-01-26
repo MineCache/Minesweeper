@@ -9,9 +9,9 @@ app.secret_key = 'dont_tell'
 @app.route("/", methods = ['GET','POST'])
 @app.route("/index", methods = ['GET','POST'])
 def home():
-    if request.method == "POST" and request.form["submit"] == "Login":
-        return redirect(url_for('login'))
-    else:
+    #if request.method == "POST" and request.form["submit"] == "Login":
+    #    return redirect(url_for('login'))
+    #else:
         #if 'user' in session:
         return render_template("home.html")
         #else:
