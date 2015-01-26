@@ -43,3 +43,6 @@ Fri Jan 23 11:45:12 EST 2015
 
 Sat Jan 24 21:29:38 EST 2015
 	- possible flags and on mine
+
+Sun Jan 25 17:25:27 EST 2015
+	- finished the javascript portion
