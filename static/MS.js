@@ -8,6 +8,23 @@ var newPage = document.getElementsByName("newPage")[0];
 var arena;
 var explored;
 var currentPosition = [0,0];
+//ARG I TRIED IDK WHY THE PAGE KEEPS REFRESHING AND THE JS REFRESHES
+//var vis = 'hidden';
+//var vis = 'visible';
+
+document.getElementById("bawx").style.margin = screen.height / 16 + "px " + screen.width / 4 + "px " + screen.height / 16 + "px " + screen.width / 4 + "px" ;
+document.getElementById("bawx2").style.margin = screen.height / 16 + "px " + screen.width / 1.75 + "px " + screen.height / 16 + "px " + screen.width / 12 + "px" ;
+
+document.getElementById("game").style.margin = screen.width / 18 + "px";
+document.getElementById("game").style.width = 0.8 * screen.width + "px";
+document.getElementById("game").style.height = 0.7 * screen.height + "px";
+
+//I WOULD LIKE TO THANK NSDEL FROM STACKOVERFLOW
+function stayvis(){
+    console.log("doing");
+    document.getElementById("ms").style.visibility = 'visible';
+    document.getElementById("game").style.background = 'black';
+}
 
 function getArenaSize(){
     var form = document.getElementsByName("getCoords")[0];
@@ -37,11 +54,13 @@ function getArenaSize(){
 }
 
 function updatePositions(){
+    stayvis();
     updateLat();
     updateLong();
 }
 
 function updateWrapper(){
+    stayvis()
     setInterval(updatePositions, 1000); 
     iniMap();
 }
@@ -134,16 +153,16 @@ function createPicture(mapPara, pic){
     var arenaPic = document.createElement("img");
     var arenaPicSrc = document.createAttribute("src");
     if(pic == -1){
-        arenaPicSrc.value = "./Flag.png";
+        arenaPicSrc.value = "/static/Flag.jpg";
     }
     else if(pic == 0){
-        arenaPicSrc.value = "./Blank.png";
+        arenaPicSrc.value = "/static/Blank.jpg";
     }
     else if(pic == 1){
-        arenaPicSrc.value = "./Mine.png";
+        arenaPicSrc.value = "/static/Mine.jpg";
     }
     else if(pic == 2){
-        arenaPicSrc.value = "./Checked.png";
+        arenaPicSrc.value = "/static/Checked.jpg";
     }
     arenaPic.setAttributeNode(arenaPicSrc);
     var arenaPicStyle = document.createAttribute("style");
