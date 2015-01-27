@@ -3,6 +3,7 @@
 ## Description
 
 It's a minesweeper game, but in real life!
+Video description [here](http://youtu.be/pv3cDqlN7vo).
 
 ## Timeline
 
